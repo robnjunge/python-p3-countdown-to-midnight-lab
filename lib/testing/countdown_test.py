@@ -1,6 +1,5 @@
 import io
 import sys
-
 from countdown import countdown, countdown_with_sleep
 
 class TestCountdown:
@@ -12,8 +11,8 @@ class TestCountdown:
         sys.stdout = captured_out
         countdown(5)
         sys.stdout = sys.__stdout__
-        assert(captured_out.getvalue() == "5 SECOND(S)!\n4 SECOND(S)!\n" + \
-            "3 SECOND(S)!\n2 SECOND(S)!\n1 SECOND(S)!\nHAPPY NEW YEAR!\n")
+        assert(captured_out.getvalue() == "5 SECOND(S)!\n4 SECOND(S)!\n" +
+               "3 SECOND(S)!\n2 SECOND(S)!\n1 SECOND(S)!\nHAPPY NEW YEAR!\n")
 
 class TestCountdownWithSleep:
     '''Function countdown_with_sleep() in countdown.py'''
@@ -24,5 +23,5 @@ class TestCountdownWithSleep:
         sys.stdout = captured_out
         countdown_with_sleep(5)
         sys.stdout = sys.__stdout__
-        assert(captured_out.getvalue() == "5 SECOND(S)!\n4 SECOND(S)!\n" + \
-            "3 SECOND(S)!\n2 SECOND(S)!\n1 SECOND(S)!\nHAPPY NEW YEAR!\n")
+        assert(captured_out.getvalue() == "5 SECOND(S)!\n4 SECOND(S)!\n" +
+               "3 SECOND(S)!\n2 SECOND(S)!\n1 SECOND(S)!\nHAPPY NEW YEAR!\n")
